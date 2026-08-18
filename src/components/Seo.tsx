@@ -10,14 +10,14 @@ const signals = [
     body: 'Title tags, meta descriptions, heading hierarchy, internal links, and copy shaped around what your customers search.',
   },
   {
-    code: 'LOCAL',
-    title: 'Local & rankings',
-    body: 'Google Business alignment, location pages, and conversion paths built so visibility turns into calls and bookings.',
+    code: 'AEO',
+    title: 'Answer engines',
+    body: 'Schema, FAQ blocks, and speakable facts so ChatGPT, Perplexity, and AI Overviews can cite your business accurately.',
   },
   {
-    code: 'TRACK',
-    title: 'Measure & iterate',
-    body: 'Search Console setup guidance, ranking checkpoints, and a clear plan to improve what the lab ships next.',
+    code: 'LOCAL',
+    title: 'Local & rankings',
+    body: 'Google Business alignment, location clarity, and conversion paths built so visibility turns into calls and bookings.',
   },
 ]
 
@@ -26,14 +26,14 @@ export function Seo() {
     <section className="section seo" id="seo" aria-labelledby="seo-title">
       <div className="section__inner">
         <div className="seo__intro">
-          <p className="section__label">LAB // Search systems</p>
+          <p className="section__label">LAB // Search + answer systems</p>
           <h2 className="section__title" id="seo-title">
-            Built to rank. Tuned to convert.
+            SEO for Google. AEO for AI.
           </h2>
           <p className="section__lede">
-            A beautiful site that nobody finds is unfinished. Every Floomp Labs
-            build ships with SEO foundations aimed at Google visibility — not
-            vanity scores, real discovery.
+            Rank where people search — and show up where they ask. Every Floomp
+            Labs build ships with SEO and answer-engine optimization so you get
+            found on Google and AI tools.
           </p>
         </div>
 
@@ -53,18 +53,18 @@ export function Seo() {
         <div className="seo__panel">
           <div className="seo__panel-head">
             <span>RANK.PROTOCOL</span>
-            <span>GOOGLE · INDEX · GROW</span>
+            <span>GOOGLE · AI · GROW</span>
           </div>
           <ul className="seo__checklist">
             <li>Keyword-informed page architecture for your market</li>
-            <li>Schema-ready business markup where it matters</li>
+            <li>Schema + FAQ markup AI engines can parse</li>
             <li>Core Web Vitals–minded performance budgets</li>
-            <li>Indexation checklist before and after launch</li>
-            <li>Optional ongoing ranking reviews after deploy</li>
+            <li>llms.txt + crawl rules for modern answer bots</li>
+            <li>Optional ongoing ranking and citation reviews</li>
           </ul>
           <a className="btn btn--ghost" href="#consult">
             <span className="btn__glyph" aria-hidden="true" />
-            Ask about SEO in consult
+            Ask about SEO &amp; AEO
           </a>
         </div>
       </div>

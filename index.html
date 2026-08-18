@@ -5,19 +5,24 @@
     <link rel="icon" type="image/jpeg" href="/favicon.jpg" />
     <link rel="apple-touch-icon" href="/favicon.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Floomp Labs | Web Design, SEO &amp; Apps for Growing Businesses</title>
+    <title>Floomp Labs | Affordable Web Design, SEO &amp; AEO for Small Businesses</title>
     <meta
       name="description"
-      content="Floomp Labs builds high-performance websites, SEO foundations, and apps for small and mid-sized businesses. Sites from $499. Free consultation."
+      content="Floomp Labs is a Philadelphia web design lab building custom websites from $499 for small and mid-sized businesses — with SEO and AEO (answer engine optimization) built in. Free consultation."
     />
     <meta
       name="keywords"
-      content="web design, SEO, Google rankings, small business website, app development, Floomp Labs, Philadelphia web design"
+      content="web design Philadelphia, affordable website design, small business website, SEO services, AEO answer engine optimization, Google rankings, Floomp Labs, custom websites from $499"
     />
     <meta name="author" content="Floomp Labs" />
-    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="bingbot" content="index, follow" />
     <meta name="theme-color" content="#03070b" />
+    <meta name="geo.region" content="US-PA" />
+    <meta name="geo.placename" content="Philadelphia" />
     <link rel="canonical" href="https://floomp.meme/" />
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM guidance" />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Floomp Labs" />
@@ -25,25 +30,24 @@
     <meta property="og:url" content="https://floomp.meme/" />
     <meta
       property="og:title"
-      content="Floomp Labs | Web Design, SEO & Apps for Growing Businesses"
+      content="Floomp Labs | Affordable Web Design, SEO & AEO for Small Businesses"
     />
     <meta
       property="og:description"
-      content="High-tech web design lab for small and mid-sized businesses. Custom sites from $499 with SEO and Google ranking foundations built in."
+      content="Custom websites from $499 with SEO and answer-engine optimization. Built in Philadelphia for businesses that need to get found — on Google and AI search."
     />
-    <meta property="og:image" content="https://floomp.meme/hero-lab.jpg" />
-    <meta property="og:image:alt" content="Floomp Labs web design laboratory" />
+    <meta property="og:image" content="https://floomp.meme/hero-future.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Floomp Labs high-tech web design laboratory" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Floomp Labs | Web Design, SEO & Apps"
-    />
+    <meta name="twitter:title" content="Floomp Labs | Web Design, SEO & AEO" />
     <meta
       name="twitter:description"
-      content="Custom websites from $499 with SEO foundations aimed at Google visibility and conversions."
+      content="Custom websites from $499 with SEO and AEO foundations for Google and AI answer engines."
     />
-    <meta name="twitter:image" content="https://floomp.meme/hero-lab.jpg" />
+    <meta name="twitter:image" content="https://floomp.meme/hero-future.jpg" />
     <meta name="twitter:site" content="@Floomp_Labs" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -52,19 +56,50 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Syne:wght@600;700;800&family=Manrope:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="preload" as="image" href="/hero-future.jpg" fetchpriority="high" />
+    <style>
+      html, body { margin: 0; background: #03070b; }
+      #root { min-height: 100svh; background: #03070b; }
+      .faq--aeo {
+        position: absolute !important;
+        width: 1px !important;
+        height: 1px !important;
+        padding: 0 !important;
+        margin: -1px !important;
+        overflow: hidden !important;
+        clip: rect(0, 0, 0, 0) !important;
+        white-space: nowrap !important;
+        border: 0 !important;
+        pointer-events: none !important;
+      }
+    </style>
 
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@graph": [
           {
-            "@type": "Organization",
+            "@type": ["Organization", "LocalBusiness", "ProfessionalService"],
             "@id": "https://floomp.meme/#organization",
             "name": "Floomp Labs",
+            "alternateName": "FLMP Labs",
             "url": "https://floomp.meme/",
             "email": "cc.floomp.meme@gmail.com",
             "telephone": "+1-609-227-3903",
-            "logo": "https://floomp.meme/favicon.svg",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://floomp.meme/favicon.jpg"
+            },
+            "image": "https://floomp.meme/hero-future.jpg",
+            "description": "Floomp Labs designs and builds custom websites, apps, SEO, and AEO systems for small and mid-sized businesses. Sites start at $499.",
+            "foundingDate": "2024",
+            "priceRange": "$499+",
+            "currenciesAccepted": "USD",
+            "paymentAccepted": "Invoice, Card",
+            "areaServed": [
+              { "@type": "Country", "name": "United States" },
+              { "@type": "City", "name": "Philadelphia" }
+            ],
             "sameAs": [
               "https://x.com/Floomp_Labs/",
               "https://github.com/Floomp-Labs",
@@ -75,7 +110,23 @@
               "addressLocality": "Philadelphia",
               "addressRegion": "PA",
               "addressCountry": "US"
-            }
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+1-609-227-3903",
+              "email": "cc.floomp.meme@gmail.com",
+              "contactType": "sales",
+              "availableLanguage": ["English"]
+            },
+            "knowsAbout": [
+              "Web design",
+              "SEO",
+              "Answer engine optimization",
+              "AEO",
+              "App development",
+              "Small business websites",
+              "Google rankings"
+            ]
           },
           {
             "@type": "WebSite",
@@ -83,41 +134,95 @@
             "url": "https://floomp.meme/",
             "name": "Floomp Labs",
             "publisher": { "@id": "https://floomp.meme/#organization" },
-            "description": "Web design, SEO, and app development laboratory for small and mid-sized businesses."
+            "inLanguage": "en-US",
+            "description": "Web design, SEO, and AEO laboratory for small and mid-sized businesses."
           },
           {
-            "@type": "ProfessionalService",
-            "@id": "https://floomp.meme/#service",
-            "name": "Floomp Labs Web Design & SEO",
+            "@type": "WebPage",
+            "@id": "https://floomp.meme/#webpage",
             "url": "https://floomp.meme/",
-            "image": "https://floomp.meme/hero-lab.jpg",
-            "priceRange": "$499+",
-            "areaServed": "US",
-            "provider": { "@id": "https://floomp.meme/#organization" },
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Web & SEO packages",
-              "itemListElement": [
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Custom business website",
-                    "description": "Custom website design and development starting at $499."
-                  },
-                  "price": "499",
-                  "priceCurrency": "USD"
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "SEO & Google rankings setup",
-                    "description": "Technical SEO, on-page optimization, and ranking foundations for Google search."
-                  }
-                }
-              ]
+            "name": "Floomp Labs | Affordable Web Design, SEO & AEO for Small Businesses",
+            "isPartOf": { "@id": "https://floomp.meme/#website" },
+            "about": { "@id": "https://floomp.meme/#organization" },
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "https://floomp.meme/hero-future.jpg"
+            },
+            "description": "Custom websites from $499 with SEO and answer-engine optimization for small and mid-sized businesses.",
+            "speakable": {
+              "@type": "SpeakableSpecification",
+              "cssSelector": [".hero__headline", ".hero__support", ".faq__answer", ".pricing__note"]
             }
+          },
+          {
+            "@type": "Service",
+            "@id": "https://floomp.meme/#web-design",
+            "name": "Custom business website design",
+            "serviceType": "Web design and development",
+            "provider": { "@id": "https://floomp.meme/#organization" },
+            "areaServed": "US",
+            "description": "Custom-designed, mobile-ready business websites starting at $499, with conversion paths and SEO foundations.",
+            "offers": {
+              "@type": "Offer",
+              "price": "499",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock",
+              "url": "https://floomp.meme/#pricing"
+            }
+          },
+          {
+            "@type": "Service",
+            "@id": "https://floomp.meme/#seo-aeo",
+            "name": "SEO and AEO optimization",
+            "serviceType": "Search and answer engine optimization",
+            "provider": { "@id": "https://floomp.meme/#organization" },
+            "description": "Technical SEO, on-page optimization, schema markup, and answer-engine optimization so businesses get found on Google and AI search tools."
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://floomp.meme/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How much does a Floomp Labs website cost?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Floomp Labs websites start at $499. Packages include custom design, mobile-ready builds, conversion paths, and SEO foundations. Custom apps and larger products are quoted separately."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is AEO and does Floomp Labs offer it?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "AEO means Answer Engine Optimization — structuring your site so AI tools like ChatGPT, Perplexity, and Google AI Overviews can cite clear answers about your business. Floomp Labs builds SEO and AEO into every site, including schema markup, FAQ content, and speakable summaries."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Where is Floomp Labs located?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Floomp Labs is based in Philadelphia, Pennsylvania, and works with clients nationwide remotely. Contact: cc.floomp.meme@gmail.com or 609-227-3903."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What kinds of businesses does Floomp Labs build for?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Floomp Labs builds for small and mid-sized businesses — service brands, local companies, and product teams — plus interactive digital brands. Work includes Endless 18, The Viking Equestrian, JobFinderz, and more."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I book a consultation with Floomp Labs?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Book a free consultation on floomp.meme by submitting the consult form, emailing cc.floomp.meme@gmail.com, or calling 609-227-3903. Typical reply time is under 24 hours."
+                }
+              }
+            ]
           }
         ]
       }
@@ -125,6 +230,37 @@
   </head>
   <body>
     <div id="root"></div>
+    <noscript>
+      <main>
+        <h1>Floomp Labs — Web Design, SEO &amp; AEO</h1>
+        <p>
+          Floomp Labs is a Philadelphia web design laboratory that builds custom
+          websites and apps for small and mid-sized businesses. Sites start at
+          $499 and include SEO and AEO (answer engine optimization) foundations.
+        </p>
+        <p>
+          Contact:
+          <a href="mailto:cc.floomp.meme@gmail.com">cc.floomp.meme@gmail.com</a>
+          ·
+          <a href="tel:6092273903">609-227-3903</a>
+        </p>
+        <h2>Services</h2>
+        <ul>
+          <li>Custom website design from $499</li>
+          <li>SEO for Google rankings</li>
+          <li>AEO for AI answer engines</li>
+          <li>App and product development</li>
+        </ul>
+        <h2>FAQ</h2>
+        <h3>How much does a Floomp Labs website cost?</h3>
+        <p>Websites start at $499.</p>
+        <h3>What is AEO?</h3>
+        <p>
+          Answer Engine Optimization helps AI tools cite clear answers about your
+          business.
+        </p>
+      </main>
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

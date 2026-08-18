@@ -4,7 +4,6 @@ import { useTelemetry } from '../hooks/useTelemetry'
 const links = [
   { href: '#work', label: 'Work' },
   { href: '#seo', label: 'SEO' },
-  { href: '#approach', label: 'Protocol' },
   { href: '#pricing', label: 'Pricing' },
   { href: '#consult', label: 'Consult', cta: true },
 ]

@@ -1,5 +1,6 @@
 import { Bridge } from './components/Bridge'
 import { Consult } from './components/Consult'
+import { Faq } from './components/Faq'
 import { Footer } from './components/Footer'
 import { Hero } from './components/Hero'
 import { Nav } from './components/Nav'
@@ -11,12 +12,15 @@ function App() {
   return (
     <>
       <Nav />
-      <Hero />
-      <Work />
-      <Bridge />
-      <Seo />
-      <Pricing />
-      <Consult />
+      <main id="main">
+        <Hero />
+        <Work />
+        <Bridge />
+        <Seo />
+        <Pricing />
+        <Faq />
+        <Consult />
+      </main>
       <Footer />
     </>
   )

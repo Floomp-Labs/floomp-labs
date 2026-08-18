@@ -1,21 +1,21 @@
 const steps = [
   {
     index: '01',
-    code: 'INTAKE',
-    title: 'Signal capture',
-    body: 'Brand, audience, offer, and search intent get locked before layouts ship.',
+    code: 'PLAN',
+    title: 'Learn your business',
+    body: 'We start with who you serve, what you sell, and what you want the site to do — get calls, bookings, or sales.',
   },
   {
     index: '02',
-    code: 'SYNTH',
-    title: 'Interface + SEO synth',
-    body: 'Custom UI systems with crawl-friendly structure, titles, and page hierarchy.',
+    code: 'DESIGN',
+    title: 'Design & build',
+    body: 'We create a custom look, write clear pages, and build a fast mobile-ready site with SEO and AEO baked in.',
   },
   {
     index: '03',
-    code: 'DEPLOY',
-    title: 'Rank & convert',
-    body: 'Fast launch with conversion paths plus SEO foundations aimed at Google.',
+    code: 'LAUNCH',
+    title: 'Launch & grow',
+    body: 'We go live, connect your contact or booking paths, and leave you with a site that’s ready to rank and convert.',
   },
 ]
 
@@ -24,13 +24,13 @@ export function Bridge() {
     <section className="section bridge" id="approach">
       <div className="section__inner">
         <div className="bridge__intro">
-          <p className="section__label">LAB // Build protocol</p>
+          <p className="section__label">LAB // How we work</p>
           <h2 className="section__title">
-            Product-grade process. Business-ready output.
+            A simple process. A serious result.
           </h2>
           <p className="section__lede">
-            Same rigor we use for digital products — applied to small and mid-sized
-            businesses that need a site that works like software.
+            No jargon maze. Three steps from first call to a live site that looks
+            sharp, loads fast, and helps customers find and contact you.
           </p>
         </div>
 

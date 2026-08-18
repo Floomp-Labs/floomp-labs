@@ -28,6 +28,7 @@ export function Pricing() {
             <ul className="pricing__list">
               <li>Custom visual system + layout</li>
               <li>SEO foundations for Google rankings</li>
+              <li>AEO for AI answer engines &amp; citations</li>
               <li>Mobile-first, performance-tuned build</li>
               <li>Contact / booking conversion paths</li>
               <li>Upgrade path into apps & richer products</li>
