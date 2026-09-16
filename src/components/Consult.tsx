@@ -4,13 +4,28 @@ import { HudCorners } from './HudCorners'
 
 type Status = 'idle' | 'submitting' | 'success' | 'error'
 
-export function Consult() {
+const lookingForOptions = [
+  'Starter — $499',
+  'Growth — $1,499',
+  'Pro — $2,499+',
+  'SEO + AEO retainer',
+  'Free website audit',
+  'Not sure yet',
+]
+
+export function Consult({
+  title = 'Get a Free Quote',
+  lede = 'Tell us about your business. We’ll reply within 24 hours with next steps and a clear package recommendation.',
+}: {
+  title?: string
+  lede?: string
+} = {}) {
   const [status, setStatus] = useState<Status>('idle')
   const [form, setForm] = useState({
     name: '',
     email: '',
     business: '',
-    budget: 'Starting at $499',
+    budget: 'Growth — $1,499',
     message: '',
   })
 
@@ -34,7 +49,7 @@ export function Consult() {
             looking_for: form.budget,
             message: form.message,
             _replyto: form.email,
-            _subject: `Floomp Labs consult — ${form.name}`,
+            _subject: `Floomp Labs quote — ${form.name}`,
             _template: 'table',
             _captcha: 'false',
           }),
@@ -55,7 +70,7 @@ export function Consult() {
         name: '',
         email: '',
         business: '',
-        budget: 'Starting at $499',
+        budget: 'Growth — $1,499',
         message: '',
       })
     } catch {
@@ -66,35 +81,37 @@ export function Consult() {
   return (
     <section className="section consult" id="consult">
       <div className="section__inner">
-        <p className="section__label">LAB // Intake terminal</p>
-        <h2 className="section__title">Transmit your brief. We’ll map the build.</h2>
-        <p className="section__lede">
-          Free consult. We’ll align on goals, timeline, and the right launch
-          package for your business.
-        </p>
+        <p className="section__label">LAB // Get a quote</p>
+        <h2 className="section__title">{title}</h2>
+        <p className="section__lede">{lede}</p>
 
         <div className="consult__layout">
           <div className="consult__details">
-            <span className="consult__chip">CHANNEL OPEN · &lt;24h reply</span>
+            <span className="consult__chip">FREE QUOTE · &lt;24h reply</span>
             <p>
               Prefer a direct line? Email{' '}
               <a href="mailto:cc.floomp.meme@gmail.com">cc.floomp.meme@gmail.com</a>{' '}
               or call <a href="tel:6092273903">609-227-3903</a>.
             </p>
             <p>Philadelphia HQ · remote deployments nationwide.</p>
+            <ul className="consult__bullets">
+              <li>Websites starting at $499</li>
+              <li>Growth &amp; Pro packages with SEO / AEO</li>
+              <li>Optional monthly search retainers</li>
+            </ul>
           </div>
 
           {status === 'success' ? (
             <div className="consult-form__success">
               <HudCorners />
-              <h3>Packet received.</h3>
-              <p>Thanks — we’ll reply soon to schedule your consultation.</p>
+              <h3>Got it — thanks.</h3>
+              <p>We’ll reply soon with your quote and next steps.</p>
             </div>
           ) : (
             <form className="consult-form" onSubmit={handleSubmit}>
               <HudCorners />
               <div className="consult-form__banner">
-                <span>INTAKE.FORM</span>
+                <span>QUOTE.FORM</span>
                 <span>SECURE</span>
               </div>
               <div className="consult-form__row">
@@ -140,22 +157,20 @@ export function Consult() {
                     value={form.budget}
                     onChange={(e) => setForm({ ...form, budget: e.target.value })}
                   >
-                    <option>Starting at $499</option>
-                    <option>Custom website</option>
-                    <option>SEO & Google rankings</option>
-                    <option>App / product build</option>
-                    <option>Not sure yet</option>
+                    {lookingForOptions.map((option) => (
+                      <option key={option}>{option}</option>
+                    ))}
                   </select>
                 </label>
               </div>
 
               <label>
-                Mission brief
+                Tell us what you need
                 <textarea
                   name="message"
                   value={form.message}
                   onChange={(e) => setForm({ ...form, message: e.target.value })}
-                  placeholder="Goals, timeline, anything useful..."
+                  placeholder="Goals, timeline, current site, anything useful..."
                   required
                 />
               </label>
@@ -165,13 +180,12 @@ export function Consult() {
                 type="submit"
                 disabled={status === 'submitting'}
               >
-                <span className="btn__glyph" aria-hidden="true" />
-                {status === 'submitting' ? 'Transmitting…' : 'Request consultation'}
+                {status === 'submitting' ? 'Sending…' : 'Get a Free Quote'}
               </button>
 
               {status === 'error' && (
                 <p className="consult-form__status consult-form__status--err">
-                  Transmit failed — email us directly and we’ll sort it out.
+                  Something went wrong — email us directly and we’ll sort it out.
                 </p>
               )}
             </form>

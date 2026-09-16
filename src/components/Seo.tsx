@@ -1,24 +1,27 @@
-const signals = [
+import { SectionCta } from './SectionCta'
+
+const pillars = [
   {
-    code: 'TECH',
-    title: 'Technical SEO',
-    body: 'Clean structure, fast loads, mobile readiness, sitemap + robots, and crawl-friendly markup Google can actually index.',
+    title: 'Google finds you',
+    body: 'We structure your site so search engines can crawl it, understand it, and rank the pages that matter for your customers.',
   },
   {
-    code: 'ONPAGE',
-    title: 'On-page signal',
-    body: 'Title tags, meta descriptions, heading hierarchy, internal links, and copy shaped around what your customers search.',
+    title: 'AI understands you',
+    body: 'We add clear answers, schema, and facts so ChatGPT, Perplexity, and AI Overviews can cite your business accurately.',
   },
   {
-    code: 'AEO',
-    title: 'Answer engines',
-    body: 'Schema, FAQ blocks, and speakable facts so ChatGPT, Perplexity, and AI Overviews can cite your business accurately.',
+    title: 'Customers find you',
+    body: 'Visibility only matters if it turns into calls and bookings. We build contact paths that convert the traffic you earn.',
   },
-  {
-    code: 'LOCAL',
-    title: 'Local & rankings',
-    body: 'Google Business alignment, location clarity, and conversion paths built so visibility turns into calls and bookings.',
-  },
+]
+
+const actions = [
+  'Keyword-informed page structure for your market',
+  'Titles, headings, and copy shaped around real searches',
+  'Fast loads and mobile-ready performance',
+  'Schema + FAQ so AI tools can quote you correctly',
+  'Local clarity for Google Business–aligned businesses',
+  'Optional monthly SEO + AEO growth retainers',
 ]
 
 export function Seo() {
@@ -26,24 +29,20 @@ export function Seo() {
     <section className="section seo" id="seo" aria-labelledby="seo-title">
       <div className="section__inner">
         <div className="seo__intro">
-          <p className="section__label">LAB // Search + answer systems</p>
+          <p className="section__label">LAB // SEO + AEO</p>
           <h2 className="section__title" id="seo-title">
-            SEO for Google. AEO for AI.
+            Google finds you. AI understands you. Customers find you.
           </h2>
           <p className="section__lede">
-            Rank where people search — and show up where they ask. Every Floomp
-            Labs build ships with SEO and answer-engine optimization so you get
-            found on Google and AI tools.
+            This is how Floomp is different from a typical web designer: every
+            Growth and Pro build is set up to get found — on Google and in AI
+            answers — then turn that attention into customers.
           </p>
         </div>
 
-        <div className="seo__grid">
-          {signals.map((item) => (
-            <article key={item.code} className="seo__card">
-              <div className="seo__meta">
-                <span>MOD/{item.code}</span>
-                <span>ACTIVE</span>
-              </div>
+        <div className="seo__pillars">
+          {pillars.map((item) => (
+            <article key={item.title} className="seo__pillar">
               <h3>{item.title}</h3>
               <p>{item.body}</p>
             </article>
@@ -52,21 +51,23 @@ export function Seo() {
 
         <div className="seo__panel">
           <div className="seo__panel-head">
-            <span>RANK.PROTOCOL</span>
-            <span>GOOGLE · AI · GROW</span>
+            <span>What we actually do</span>
+            <span>No jargon maze</span>
           </div>
           <ul className="seo__checklist">
-            <li>Keyword-informed page architecture for your market</li>
-            <li>Schema + FAQ markup AI engines can parse</li>
-            <li>Core Web Vitals–minded performance budgets</li>
-            <li>llms.txt + crawl rules for modern answer bots</li>
-            <li>Optional ongoing ranking and citation reviews</li>
+            {actions.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
           </ul>
           <a className="btn btn--ghost" href="#consult">
-            <span className="btn__glyph" aria-hidden="true" />
-            Ask about SEO &amp; AEO
+            Get a Free Quote
           </a>
         </div>
+
+        <SectionCta
+          title="Want to show up where customers are searching?"
+          lede="Ask about Growth, Pro, or a monthly SEO + AEO retainer."
+        />
       </div>
     </section>
   )

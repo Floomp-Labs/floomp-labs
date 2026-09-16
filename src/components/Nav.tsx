@@ -1,14 +1,24 @@
 import { useEffect, useState } from 'react'
 import { useTelemetry } from '../hooks/useTelemetry'
 
-const links = [
+const homeLinks = [
   { href: '#work', label: 'Work' },
   { href: '#seo', label: 'SEO' },
   { href: '#pricing', label: 'Pricing' },
-  { href: '#consult', label: 'Consult', cta: true },
+  { href: '#consult', label: 'Get a Quote', cta: true },
 ]
 
-export function Nav() {
+type NavProps = {
+  brandHref?: string
+  links?: { href: string; label: string; cta?: boolean }[]
+  meta?: string
+}
+
+export function Nav({
+  brandHref = '#top',
+  links = homeLinks,
+  meta = 'Web Design · SEO · AEO',
+}: NavProps) {
   const { stamp, load } = useTelemetry()
   const [open, setOpen] = useState(false)
 
@@ -34,17 +44,17 @@ export function Nav() {
   return (
     <nav className={`site-nav${open ? ' is-open' : ''}`} aria-label="Primary">
       <div className="site-nav__left">
-        <a className="site-nav__brand" href="#top" onClick={close}>
+        <a className="site-nav__brand" href={brandHref} onClick={close}>
           <span className="site-nav__mark" aria-hidden="true" />
           FLMP://LABS
         </a>
-        <span className="site-nav__meta">WEB DESIGN LAB · v2.4</span>
+        <span className="site-nav__meta">{meta}</span>
       </div>
 
       <div className="site-nav__links site-nav__links--desktop">
         {links.map((link) => (
           <a
-            key={link.href}
+            key={link.href + link.label}
             href={link.href}
             className={link.cta ? 'site-nav__cta' : undefined}
           >
@@ -77,16 +87,16 @@ export function Nav() {
         hidden={!open}
       >
         <div className="site-nav__drawer-head">
-          <span>NAV.PANEL</span>
           <span>MENU</span>
+          <span>FLOOMP</span>
         </div>
         <div className="site-nav__drawer-links">
-          <a href="#top" onClick={close}>
+          <a href={brandHref} onClick={close}>
             Home
           </a>
           {links.map((link) => (
             <a
-              key={link.href}
+              key={link.href + link.label}
               href={link.href}
               className={link.cta ? 'site-nav__cta' : undefined}
               onClick={close}

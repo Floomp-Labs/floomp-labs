@@ -1,3 +1,5 @@
+import { SectionCta } from './SectionCta'
+
 const steps = [
   {
     index: '01',
@@ -22,7 +24,12 @@ const steps = [
 export function Bridge() {
   return (
     <section className="section bridge" id="approach">
-      <div className="section__inner">
+      <div className="bridge__media" aria-hidden="true">
+        <img src="/bridge-lab.jpg" alt="" width={1600} height={900} loading="lazy" />
+        <div className="bridge__veil" />
+      </div>
+
+      <div className="section__inner bridge__content">
         <div className="bridge__intro">
           <p className="section__label">LAB // How we work</p>
           <h2 className="section__title">
@@ -51,6 +58,11 @@ export function Bridge() {
             </li>
           ))}
         </ol>
+
+        <SectionCta
+          title="Let’s map your build"
+          lede="Free quote. Clear timeline. Packages from $499."
+        />
       </div>
     </section>
   )

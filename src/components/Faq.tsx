@@ -1,11 +1,11 @@
 const faqs = [
   {
     q: 'How much does a Floomp Labs website cost?',
-    a: 'Websites start at $499. That covers custom design, a mobile-ready build, conversion paths, and SEO foundations. Larger apps and custom products are quoted after a free consult.',
+    a: 'Starter websites begin at $499. Growth is $1,499. Pro starts at $2,499+. SEO + AEO growth retainers run $999–$1,999/mo. Free quotes recommend the right package.',
   },
   {
     q: 'What is AEO, and do you include it?',
-    a: 'AEO is Answer Engine Optimization — structuring your site so AI tools (ChatGPT, Perplexity, Google AI Overviews) can cite clear facts about your business. We ship AEO with schema, FAQ content, and speakable summaries alongside classic SEO.',
+    a: 'AEO is Answer Engine Optimization — structuring your site so AI tools (ChatGPT, Perplexity, Google AI Overviews) can cite clear facts about your business. Growth includes SEO foundations; Pro adds full AEO alongside classic SEO.',
   },
   {
     q: 'Where is Floomp Labs based?',
@@ -13,11 +13,11 @@ const faqs = [
   },
   {
     q: 'Who do you build websites for?',
-    a: 'Small and mid-sized businesses — local service brands, growing companies, and digital products. Recent work includes Endless 18, The Viking Equestrian, and JobFinderz.',
+    a: 'Small and mid-sized businesses — local service brands, growing companies, and digital products. Recent work includes Endless 18, The Viking Equestrian, JobFinderz, and Agentify.',
   },
   {
-    q: 'How do I book a consultation?',
-    a: 'Use the consult form on this site, email cc.floomp.meme@gmail.com, or call 609-227-3903. Consultations are free and replies usually arrive within 24 hours.',
+    q: 'How do I get a free quote?',
+    a: 'Use the quote form on this site, email cc.floomp.meme@gmail.com, or call 609-227-3903. Quotes are free and replies usually arrive within 24 hours.',
   },
 ]
 

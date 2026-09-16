@@ -7,6 +7,14 @@ export function Footer() {
           <p>
             Web design, SEO &amp; AEO · Philadelphia · Sites from $499 ·{' '}
             <a href="mailto:cc.floomp.meme@gmail.com">cc.floomp.meme@gmail.com</a>
+            {' · '}
+            <a href="tel:6092273903">609-227-3903</a>
+          </p>
+          <p className="site-footer__links">
+            <a href="/#work">Work</a>
+            <a href="/#pricing">Pricing</a>
+            <a href="/web-design">Web Design</a>
+            <a href="/#consult">Get a Quote</a>
           </p>
         </div>
         <div className="site-footer__socials">
